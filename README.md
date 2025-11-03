@@ -1,2 +1,2 @@
 # Projects_ACS
-Projects, homework and solved problems from Uni
+Homework and solved problems from Uni
