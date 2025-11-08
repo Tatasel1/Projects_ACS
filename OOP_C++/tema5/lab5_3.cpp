@@ -8,7 +8,8 @@ class overLoad {
     string s1;
     string s2;
     string parti[10];
-    public:
+    int nr_elem_parti;
+public:
     overLoad() {
         s1="Ceva.";
         s2="Mai Mult";
@@ -18,25 +19,35 @@ class overLoad {
     }
 
     void operator -() {
-        string aux="";
-        int k=0;
-        for (int i=0;i<s1.length();i++) {
-            char c=s1[i];
-            if (c == '.' || c==',') {
-                parti[k++]=aux;
-                aux="";
+        string aux = "";
+        nr_elem_parti = 0;
+        string siruri[2] = {s1, s2};
+        ///aici bucla for pentru j itereaza prin cele doua siruri s1 si s2
+        for (int j = 0; j < 2; j++) {
+            string& s = siruri[j];
+            aux="";
+            ///aici cauta in fiecare din siruri . sau , pentru delimitare, daca nu exista delimitare se salveaza sirul initial in parti
+            for (int i = 0; i < s.length(); i++) {
+                char c = s[i];
+                if (c == '.' || c == ',') {
+                    if (!aux.empty()) {
+                        parti[nr_elem_parti++] = aux;
+                        aux = "";
+                    }
+                } else {
+                    aux += c;
+                }
             }
-            else {
-                aux+=c;
+            if (!aux.empty()) {
+                parti[nr_elem_parti++] = aux;
             }
-        }
-        if (!aux.empty()) {
-            parti[k++] = aux;
-        }
-        for (int i = k; i < 10; i++) {
-            parti[i] = "";
         }
 
+
+
+        for (int i = nr_elem_parti; i < 10; i++) {
+            parti[i] = "";
+        }
     }
 
     void getSir() {
@@ -45,7 +56,7 @@ class overLoad {
     }
 
     void getParti() {
-        for (int i=0;i<10;i++)
+        for (int i=0;i<nr_elem_parti;i++)
             cout<<this->parti[i]<<endl;
 
     }
