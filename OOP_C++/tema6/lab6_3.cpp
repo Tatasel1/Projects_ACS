@@ -9,7 +9,7 @@ public:
 };
 
 class hibrid {
-    protected:
+protected:
     string numeDispozitiv;
 public:
     string getNume() {
@@ -22,9 +22,9 @@ public:
 };
 
 class Imprimanta:public iLogger, public hibrid {
-    private:
+private:
     bool conectat;
-    public:
+public:
     Imprimanta(const string& nume, bool c):conectat(c) {}
 
     bool esteConectat() override {
