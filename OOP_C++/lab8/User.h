@@ -15,7 +15,6 @@ class User: public IUser {
 
     public:
     void print() override;
-    ~Operator() override = default;
 };
 
 class Operator: public User {
@@ -34,5 +33,3 @@ class Client: public User {
     void print() override;
     ~Client() override = default;
 };
-
-///class Cursa
