@@ -27,7 +27,6 @@ class Operator: public User {
 
 class Client: public User {
     public:
-    void createAccount();
     void bookCursa();
     void cancelCursa();
     void print() override;

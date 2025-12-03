@@ -9,6 +9,7 @@ class Aplicatie {
     std::vector<Calatorie> calatorii;
     public:
     void login();
+    void createAccount();
     void addUser(IUser* user);
     void addCalatorie(const Calatorie& calatorie);
     void printUsers();
