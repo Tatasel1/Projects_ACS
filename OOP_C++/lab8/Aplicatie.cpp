@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "Exceptions.h"
 
 void Aplicatie::loadUsers() {
 
@@ -126,7 +127,15 @@ Aplicatie::~Aplicatie() {
 
 int main() {
     Aplicatie app;
-    app.login();
+    try {
+
+        if (!app.login()) {
+            throw InvalidCredentialsException();
+        }
+    }
+    catch (InvalidCredentialsException e) {
+        std::cout<< e.what()<<"\n";
+    }
     app.loadUsers();
     app.printClients();
 
