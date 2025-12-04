@@ -48,4 +48,19 @@ def MP(A,n):
 
 
 def MPI(A,n):
-    
+    y=rng.random(n)
+    y=y/np.linalg.norm(y)
+    i = 0
+    e = 1
+    while e > tol:
+        if i > maxiter:
+            print("Numar maxim de iteratii atins!")
+            break
+        mu = y.T.dot(A).dot(y)
+        z = np.linalg.solve(mu*np.identity(n)-A,y)
+        z = z/np.linalg.norm(z)
+        e = np.abs(1-np.abs(z.T.dot(y)))
+        y = z
+        i += 1
+    Lambda = np.transpose(np.power(y, i-2)).dot(A).dot(np.power(y, i-2))
+    return z,Lambda,e,i

@@ -5,14 +5,20 @@
 
 class Aplicatie {
     private:
-    std::vector<Client> clients;
+    std::vector<User> clients;
     std::vector<Calatorie> calatorii;
     public:
-    void login();
+
+    void loadUsers();
+    bool login();
     void createAccount();
-    void addUser(IUser* user);
+    void addUser(User user);
     void addCalatorie(const Calatorie& calatorie);
-    void printUsers();
+    void removeCalatorie(int idCalatorie);
+
     void printCalatorii();
+    void bookCursa();
+    void printClients();
+
     ~Aplicatie();
 };

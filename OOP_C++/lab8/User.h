@@ -1,34 +1,47 @@
 #pragma once
 #include <string>
 
-class IUser {
+/*(class IUser {
     public:
     virtual void print() = 0;
     virtual ~IUser() = default;
-};
+};*/
 
-class User: public IUser {
+class User {
     protected:
     std::string name;
     std::string email;
     std::string password;
 
     public:
-    void print() override;
+    std::string getName() {
+        return name;
+    }
+    std::string getEmail() {
+        return email;
+    }
+    std::string getPassword() {
+        return password;
+    }
+
+    void setName(const std::string name) {
+        this->name = name;
+    }
+    void setEmail(const std::string email) {
+        this->email = email;
+    }
+    void setPassword(const std::string password) {
+        this->password = password;
+    }
 };
 
-class Operator: public User {
+/*class Operator: public User {
     public:
-    void addCursa();
-    void removeCursa();
-    void print() override;
-    ~Operator() override = default;
-};
 
-class Client: public User {
+};*/
+
+/*class Client: public User {
     public:
-    void bookCursa();
-    void cancelCursa();
-    void print() override;
-    ~Client() override = default;
+
 };
+*/
