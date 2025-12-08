@@ -121,7 +121,7 @@ int main() {
     int nrToppinguri;
     std:: vector<std:: string> toppinguri;
     std:: cout << "Tip blat (DOAR SUBTIRE SAU PUFOS):";
-    std:: getline(std:: cin, blat);
+    std:: cin>>blat;
 
     try {
         if (blat != "subtire" && blat != "pufos") {
@@ -134,7 +134,7 @@ int main() {
     }
 
     std:: cout << "Tip sos: (DOAR ALB SAU ROSU):";
-    std:: getline(std:: cin, sos);
+    std:: cin>>sos;
 
     try {
         if (sos != "alb" && sos != "rosu") {
