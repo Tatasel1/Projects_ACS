@@ -69,7 +69,7 @@ private:
     PizzaBuilder builder;
 public:
     Pizza makeMargherita(IPizzaBuilder& builder) {
-        builder.buildBlat("clasic");
+        builder.buildBlat("subtire");
         builder.buildSos("rosii");
         builder.buildTopping("mozzarella");
         builder.buildTopping("busuioc");
@@ -84,7 +84,7 @@ public:
         return builder.getPizza();
     }
     Pizza makeQuatroStagioni(IPizzaBuilder& builder) {
-        builder.buildBlat("gros");
+        builder.buildBlat("pufos");
         builder.buildSos("cremă de brânză");
         builder.buildTopping("mozzarella");
         builder.buildTopping("ciuperci");
@@ -155,7 +155,8 @@ int main() {
         std:: getline(std:: cin, topping);
         toppinguri.push_back(topping);
     }
-    std::cout<<"=============Pizza Customizata:============\n";
+
+    std::cout<<"\n============Pizza Customizata:============\n";
     Pizza pizzaCustom = factory.makePizzaCustom(builder, blat, sos, toppinguri);
     pizzaCustom.descriere();
 
