@@ -71,4 +71,14 @@ int main() {
     return 0;
 }
 
-
+/*
+ * Composite Design Pattern este un pattern structural care permite tratarea ierarhiilor de obiecte compuse si simple in mod uniform.
+ * Acesta simuleaza structura unui arbore, cu radacina, noduri si frunze.
+ * Avantajele acestui pattern pot fi faptul ca simplifica structurile complexe de arbori, folosind polimorfismul.
+ * Principiul Open/Closed este respectat. Acesta presupune ca entitatile software (clase, module, functii etc.) trebuie sa fie deschise pentru extindere, dar inchise pentru modificare.
+ * In pattern, acest principiu se observa prin faptul ca putem adauga noi tipuri de componente (de exemplu, noi tipuri de fisiere sau foldere) fara a modifica codul existent al componentelor.
+ *
+ * Dezavantajul acestui pattern poate fi dificultatea de a oferi o interfata comuna claselor care au functionalitati diferite, obligand la "suprageneralizarea" interfetei.
+ * Pe scurt unele obiecte trebuie tratate ca avand aceleasi functionalitati cu altele, chiar daca ele nu le au in mod natural.
+ * Acest lucru poate face logica mai greude inteles.
+ */
