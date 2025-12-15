@@ -161,3 +161,13 @@ int main() {
     pizzaCustom.descriere();
 
 }
+
+/* Builder Design Pattern este folosit in principal pentru a construi obiecte complexe pas cu pas.
+ * Avantajele acestuia pot fi construirea obiectelor pas cu pas si posibilitatea de a crea diferite reprezentari ale aceluiasi tip de obiect.
+ * Se pot reutiliza aceleasi procese de construire pentru a crea diferite tipuri de obiecte.
+ * Single Responsibility Principle este respectat deoarece fiecare clasa are o singura responsabilitate: PizzaBuilder se ocupa de construirea obiectului Pizza, iar PizzaBuilderFactory se ocupa de definirea diferitelor tipuri de pizza.
+ *
+ * Dezavantajul acestui limbaj poate fi complexitatea crescuta a codului datorita numarului mare de clase implicate in implementare.
+ *
+ * Sursa: https://refactoring.guru/design-patterns/builder
+ */
